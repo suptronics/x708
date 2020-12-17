@@ -1,0 +1,13 @@
+[Unit]
+Description=RPI x708 Power Manager daemon
+After=sysinit.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rpi-x708pwm.py --min-voltage 3.5 -q
+ExecReload=/usr/bin/kill -HUP $MAINPID
+PIDFile=/run/rpi-x708pwm.pid
+Restart=always
+
+[Install]
+WantedBy=sysinit.target
