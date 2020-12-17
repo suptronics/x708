@@ -66,7 +66,7 @@ One workaround is to do this just at the last actions performed bysystemd, in `/
 However, the files in that directory seems to be executed in parallel. Although this is probably a motive for being slaughtered by
 a systemd developer, the workaround I've done is to merge all the files into a single one to make sure that the snippet below is 
 executed at the very end. I'm sure there's a better alternative. If you know it and tell me, I'll appreciate it. However, I personally
-don't mind too much if it takes a few more seconds to shutdown the pi, so *messirve*. Besides, it only affects to shutdown and not to reboot.
+don't mind too much if it takes a few more seconds to shutdown the pi, so *messirve*.
 
 For more info, see https://www.freedesktop.org/software/systemd/man/systemd-halt.service.html
 
